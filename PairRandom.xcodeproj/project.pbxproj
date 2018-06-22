@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B09A3DF020DD49C70038CB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A3DEF20DD49C70038CB04 /* AppDelegate.swift */; };
-		B09A3DF220DD49C70038CB04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A3DF120DD49C70038CB04 /* ViewController.swift */; };
 		B09A3DF520DD49C70038CB04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09A3DF320DD49C70038CB04 /* Main.storyboard */; };
 		B09A3DF720DD49CB0038CB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09A3DF620DD49CB0038CB04 /* Assets.xcassets */; };
 		B09A3DFA20DD49CB0038CB04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09A3DF820DD49CB0038CB04 /* LaunchScreen.storyboard */; };
 		B09A3E0320DD4C170038CB04 /* Group.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B09A3E0120DD4C170038CB04 /* Group.xcdatamodeld */; };
+		B09A3E0520DD4EEF0038CB04 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A3E0420DD4EEF0038CB04 /* CoreDataStack.swift */; };
+		B09A3E0920DD4FC10038CB04 /* Group+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A3E0820DD4FC10038CB04 /* Group+Convenience.swift */; };
+		B09A3E0B20DD50930038CB04 /* GroupModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A3E0A20DD50930038CB04 /* GroupModelController.swift */; };
+		B09A3E1220DD51A70038CB04 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09A3E1120DD51A70038CB04 /* GroupTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B09A3DEC20DD49C70038CB04 /* PairRandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PairRandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09A3DEF20DD49C70038CB04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B09A3DF120DD49C70038CB04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B09A3DF420DD49C70038CB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B09A3DF620DD49CB0038CB04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B09A3DF920DD49CB0038CB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B09A3DFB20DD49CB0038CB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B09A3E0220DD4C170038CB04 /* Group.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Group.xcdatamodel; sourceTree = "<group>"; };
+		B09A3E0420DD4EEF0038CB04 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B09A3E0820DD4FC10038CB04 /* Group+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+Convenience.swift"; sourceTree = "<group>"; };
+		B09A3E0A20DD50930038CB04 /* GroupModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModelController.swift; sourceTree = "<group>"; };
+		B09A3E1120DD51A70038CB04 /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		B09A3DEE20DD49C70038CB04 /* PairRandom */ = {
 			isa = PBXGroup;
 			children = (
-				B09A3DEF20DD49C70038CB04 /* AppDelegate.swift */,
-				B09A3DF120DD49C70038CB04 /* ViewController.swift */,
-				B09A3DF320DD49C70038CB04 /* Main.storyboard */,
+				B09A3E0C20DD50CD0038CB04 /* Model */,
+				B09A3E0E20DD50DC0038CB04 /* UI */,
+				B09A3E0F20DD50E30038CB04 /* View Controller */,
+				B09A3E0D20DD50D40038CB04 /* Model Controller */,
+				B09A3E0A20DD50930038CB04 /* GroupModelController.swift */,
+				B09A3E0820DD4FC10038CB04 /* Group+Convenience.swift */,
+				B09A3E1020DD512D0038CB04 /* Resource */,
 				B09A3E0120DD4C170038CB04 /* Group.xcdatamodeld */,
-				B09A3DF620DD49CB0038CB04 /* Assets.xcassets */,
-				B09A3DF820DD49CB0038CB04 /* LaunchScreen.storyboard */,
-				B09A3DFB20DD49CB0038CB04 /* Info.plist */,
 			);
 			path = PairRandom;
+			sourceTree = "<group>";
+		};
+		B09A3E0C20DD50CD0038CB04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B09A3E0420DD4EEF0038CB04 /* CoreDataStack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B09A3E0D20DD50D40038CB04 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		B09A3E0E20DD50DC0038CB04 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B09A3DF320DD49C70038CB04 /* Main.storyboard */,
+				B09A3DF820DD49CB0038CB04 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B09A3E0F20DD50E30038CB04 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B09A3E1120DD51A70038CB04 /* GroupTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		B09A3E1020DD512D0038CB04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B09A3DEF20DD49C70038CB04 /* AppDelegate.swift */,
+				B09A3DF620DD49CB0038CB04 /* Assets.xcassets */,
+				B09A3DFB20DD49CB0038CB04 /* Info.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B09A3DF220DD49C70038CB04 /* ViewController.swift in Sources */,
+				B09A3E0920DD4FC10038CB04 /* Group+Convenience.swift in Sources */,
 				B09A3DF020DD49C70038CB04 /* AppDelegate.swift in Sources */,
+				B09A3E0B20DD50930038CB04 /* GroupModelController.swift in Sources */,
 				B09A3E0320DD4C170038CB04 /* Group.xcdatamodeld in Sources */,
+				B09A3E0520DD4EEF0038CB04 /* CoreDataStack.swift in Sources */,
+				B09A3E1220DD51A70038CB04 /* GroupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7CCUH8W47;
-				INFOPLIST_FILE = PairRandom/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PairRandom/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S7CCUH8W47;
-				INFOPLIST_FILE = PairRandom/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PairRandom/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
